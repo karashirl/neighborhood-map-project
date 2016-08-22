@@ -31,3 +31,6 @@ APIs:
 * https://snazzymaps.com
 * https://developer.foursquare.com
 * https://www.dirtymarkup.com
+* https://discussions.udacity.com/t/click-on-list-to-open-infowindow/42428/6
+* https://discussions.udacity.com/t/difficulties-integrating-foursquare/183539/2
+* https://discussions.udacity.com/t/stuck-on-showing-infowindow-content-and-binding-list-to-infowindow/21816
