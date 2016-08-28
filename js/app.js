@@ -1,3 +1,11 @@
+/*
+ Project Name: Interactive Neighborhood Map - Udacity Front-End Developer Nanodegree
+ Description:  Use Knockout JS, Google Maps and Foursquare APIs to display and filter popular attractions on a map of the Patterson Park Neighborhood in Baltimore, MD.
+ Author:       Kara Anderson
+ Author URI:   karashirl.github.io
+ Date:         8/28/2016
+*/
+
 var map;
 
 var locationData = [
@@ -285,6 +293,7 @@ var locationData = [
 
 var filters = ['All', 'Food', 'Bars', 'Coffee & Juice Bars', 'Shopping', 'Recreation'];
 
+// Render Google Map
 function initMap() {
     'use strict';
     var mapContainer = document.getElementById('map');
@@ -329,11 +338,13 @@ function initMap() {
     ko.applyBindings(new AppViewModel());
 }
 
-function mapError() {
+// Handle Google Maps API errors
+function mapsError() {
     'use strict';
     document.getElementById('map').innerHTML = '<h3 style="text-align:center;">Sorry, Google Maps is not available at the moment. Please try again later.</h3>';
 }
 
+// Create new location object
 var Location = function(self) {
     'use strict';
     this.name = ko.observable(self.name), this.lat = ko.observable(self.lat),
@@ -342,6 +353,7 @@ var Location = function(self) {
         this.photoPrefix = ko.observable(''), this.photoSuffix = ko.observable('');
 };
 
+// Create view model object
 var AppViewModel = function() {
     'use strict';
     var self = this;
